@@ -7,7 +7,6 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
-
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'tomasr/molokai'
 Plugin 'vim-airline/vim-airline'
@@ -19,7 +18,6 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
-Plugin 'Raimondi/delimitMate'
 Plugin 'jez/vim-superman'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jez/vim-c0'
@@ -34,7 +32,6 @@ Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'tpope/vim-liquid'
 Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'sickill/vim-pasta'
 Plugin 'xuyuanp/nerdtree-git-plugin'
 Plugin 'stanangeloff/php.vim'
 Plugin 'shawncplus/phpcomplete.vim'
@@ -49,8 +46,7 @@ Plugin 'mxw/vim-jsx'
 Plugin 'isruslan/vim-es6'
 Plugin 'beautify-web/js-beautify'
 Plugin 'klen/python-mode'
-Plugin 'luchermitte/vim-build-tools-wrapper'
-Plugin 'valloric/youcompleteme'
+Plugin 'artur-shaik/vim-javacomplete2'
 
 call vundle#end()
 
@@ -135,14 +131,5 @@ let g:easytags_suppress_ctags_warning = 1
 nmap <silent> <leader>b :TagbarToggle<CR>
 
 let g:airline#extensions#hunks#non_zero_only = 1
-
-let delimitMate_expand_cr = 1
-augroup mydelimitMate
-  au!
-  au FileType markdown let b:delimitMate_nesting_quotes = ["`"]
-  au FileType tex let b:delimitMate_quotes = ""
-  au FileType tex let b:delimitMate_matchpairs = "(:),[:],{:},`:'"
-  au FileType python let b:delimitMate_nesting_quotes = ['"', "'"]
-augroup END
 
 noremap K :SuperMan <cword><CR>
